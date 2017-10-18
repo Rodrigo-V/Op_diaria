@@ -26,17 +26,16 @@ namespace Op_Diaria
             progressBar1.Value = 0;
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 100;
-            
+           
 
 
         }
-
         private void PictureBox1_Click(object sender, EventArgs e)
 
         {
 
-            label3.Visible = false;
-           
+            this.label3.Text = "Cargando componentes del formulario";
+
 
 
 
@@ -44,15 +43,17 @@ namespace Op_Diaria
             {
 
 
-                Thread.Sleep(150);
+                Thread.Sleep(100);
                 progressBar1.Value = i;
                 progressBar1.Update();
-                
+
 
             }
 
+           
 
-
+            
+                     
             registro res = new registro();
             res.Show();
             this.Hide();
@@ -60,6 +61,7 @@ namespace Op_Diaria
 
         }
 
+       
     }
 
 
